@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * Bootstrap sub-theme.
@@ -17,4 +18,3 @@ function uwmed_testb_preprocess_page(&$variables) {
     }
   }
 }
-

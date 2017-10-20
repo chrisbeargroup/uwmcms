@@ -1,0 +1,25 @@
+name: 'UWMed TestB'
+description: 'Bootstrap subtheme for testing.'
+core: 8.x
+type: theme
+base theme: bootstrap
+
+regions:
+  branding: 'Branding'
+  navigation: 'Navigation'
+  header: 'Header'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  content_header: 'Content Header'
+  content: 'Content'
+  sidebar_first: 'Primary'
+  sidebar_second: 'Secondary'
+  footer_first: 'Footer First'
+  footer_second: 'Footer Second'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+
+libraries:
+  - 'uwmed_testb/global-styles'
+  - 'uwmed_testb/global-scripts'
+  - 'uwmed_testb/google-fonts'

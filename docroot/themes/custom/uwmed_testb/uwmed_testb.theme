@@ -1,0 +1,20 @@
+<?php
+/**
+ * @file
+ * Bootstrap sub-theme.
+ *
+ * Place your custom PHP code in this file.
+ */
+
+/**
+ * Implements hook_preprocess_HOOK() for page templates.
+ */
+function uwmed_testb_preprocess_page(&$variables) {
+  // If this is an Article node page, add the chew/sharethis library.
+  if ($node = \Drupal::request()->attributes->get('node')) {
+    if ($node->getType() == 'article') {
+      $variables['#attached']['library'][] = 'chew/sharethis';
+    }
+  }
+}
+

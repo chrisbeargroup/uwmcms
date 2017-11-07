@@ -481,6 +481,32 @@
   }
 }
 
+// Front Page News Briefs
+#block-views-block-uwm-news-briefs-block-recent-news-briefs {
+  h3 {
+    @include font-size(1.6, 1.8);
+  }
+  .more-link {
+    a {
+      @include font-size(1.4, 1.6);
+    }
+  }
+  .view-uwm-news-briefs {
+    .views-row {
+      margin-bottom: 28px;
+      .views-field-title {
+        @include font-size(1.6, 2.4);
+      }
+      .views-field-body {
+        @include font-size(1.6, 2.4);
+        p {
+          @include font-size(1.6, 2.4);
+        }
+      }
+    }
+  }
+}
+
 // Node Theming
 .article.featured {
   header {
@@ -1735,6 +1761,42 @@ article.webform {
     }
   }
 }
+// News Briefs View / Node
+.path-news-briefs {
+  .main-inner {
+    padding-top: 56px;
+    padding-bottom: 76px;
+  }
+  #content {
+    #block-uwmed-bootstrap-content {
+      width: 100%;
+      max-width: 800px;
+      @include center-block();
+    }
+    .view-page_news_briefs {
+      > header {
+        padding: 0 0 0 110px;
+        @include font-size(4.8, 5.6);
+        h1 {
+          @include font-size(4.8, 5.6);
+          margin: 0 0 40px 0;
+        }
+        .submit-link {
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+      }
+      .views-content {
+        .views-row {
+          padding: 0 0 40px 110px;
+          margin-bottom: 40px;
+        }
+      }
+    }
+  }
+}
+
 //Upper Content & Main Area ends -----------------------------------------------------
 
 //Lower Content ----------------------------------------------------------------------

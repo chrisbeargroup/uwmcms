@@ -281,69 +281,6 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: field
-        field_category:
-          id: field_category
-          table: node__field_category
-          field: field_category
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: Category
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: false
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
         field_featured_content:
           id: field_featured_content
           table: node__field_featured_content
@@ -723,133 +660,6 @@ display:
           plugin_id: node_status
           group: 1
           entity_type: node
-        field_featured_content_value:
-          id: field_featured_content_value
-          table: node__field_featured_content
-          field: field_featured_content_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '='
-          value: All
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: Featured
-            description: ''
-            use_operator: false
-            operator: field_featured_content_value_op
-            identifier: field_featured_content_value
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              page_creator: '0'
-              layout_manager: '0'
-              page_reviewer: '0'
-              landing_page_creator: '0'
-              uwm_editor: '0'
-              landing_page_reviewer: '0'
-              media_creator: '0'
-              media_manager: '0'
-              article_creator: '0'
-              article_reviewer: '0'
-              award_creator: '0'
-              award_reviewer: '0'
-              campaign_creator: '0'
-              campaign_reviewer: '0'
-              event_creator: '0'
-              event_reviewer: '0'
-              gallery_creator: '0'
-              gallery_reviewer: '0'
-              question_creator: '0'
-              question_reviewer: '0'
-              webform_creator: '0'
-              webform_reviewer: '0'
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          plugin_id: boolean
-        field_category_target_id:
-          id: field_category_target_id
-          table: node__field_category
-          field: field_category_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_category_target_id_op
-            label: 'Article category'
-            description: ''
-            use_operator: false
-            operator: field_category_target_id_op
-            identifier: field_category_target_id
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              page_creator: '0'
-              layout_manager: '0'
-              page_reviewer: '0'
-              landing_page_creator: '0'
-              uwm_editor: '0'
-              landing_page_reviewer: '0'
-              media_creator: '0'
-              media_manager: '0'
-              article_creator: '0'
-              article_reviewer: '0'
-              award_creator: '0'
-              award_reviewer: '0'
-              campaign_creator: '0'
-              campaign_reviewer: '0'
-              event_creator: '0'
-              event_reviewer: '0'
-              gallery_creator: '0'
-              gallery_reviewer: '0'
-              question_creator: '0'
-              question_reviewer: '0'
-              webform_creator: '0'
-              webform_reviewer: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          type: select
-          limit: true
-          vid: categories
-          hierarchy: true
-          error_message: true
-          plugin_id: taxonomy_index_tid
       sorts: {  }
       title: Content
       empty:
@@ -890,7 +700,6 @@ display:
         - user.permissions
       max-age: 0
       tags:
-        - 'config:field.storage.node.field_category'
         - 'config:field.storage.node.field_date'
         - 'config:field.storage.node.field_featured_content'
   page_1:
@@ -1014,7 +823,6 @@ display:
         - user.permissions
       max-age: 0
       tags:
-        - 'config:field.storage.node.field_category'
         - 'config:field.storage.node.field_date'
         - 'config:field.storage.node.field_featured_content'
   page_2:

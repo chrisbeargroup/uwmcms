@@ -1,0 +1,36 @@
+uuid: 7bc894fb-cebf-44ff-aabc-c86564b1700e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.news_brief.body
+    - field.field.node.news_brief.field_date
+    - node.type.news_brief
+  module:
+    - datetime
+    - text
+    - user
+id: node.news_brief.full
+targetEntityType: node
+bundle: news_brief
+mode: full
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_date:
+    weight: 0
+    label: hidden
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+hidden:
+  links: true

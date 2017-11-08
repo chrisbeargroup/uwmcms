@@ -4,11 +4,14 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.full
-    - field.field.node.news_brief.body
+    - field.field.node.news_brief.field_body
     - field.field.node.news_brief.field_date
+    - field.field.node.news_brief.field_image
+    - field.field.node.news_brief.field_teaser
     - node.type.news_brief
   module:
     - datetime
+    - image
     - text
     - user
 id: node.news_brief.full
@@ -16,15 +19,15 @@ targetEntityType: node
 bundle: news_brief
 mode: full
 content:
-  body:
-    label: hidden
+  field_body:
     type: text_default
-    weight: 1
+    weight: 2
+    region: content
+    label: above
     settings: {  }
     third_party_settings: {  }
-    region: content
   field_date:
-    weight: 0
+    weight: 1
     label: hidden
     settings:
       format_type: medium
@@ -32,5 +35,15 @@ content:
     third_party_settings: {  }
     type: datetime_default
     region: content
+  field_image:
+    type: image
+    weight: 0
+    region: content
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
 hidden:
+  field_teaser: true
   links: true

@@ -497,7 +497,7 @@
       .views-field-title {
         @include font-size(1.6, 2.4);
       }
-      .views-field-body {
+      .views-field-field-teaser {
         @include font-size(1.6, 2.4);
         p {
           @include font-size(1.6, 2.4);
@@ -1753,7 +1753,6 @@ article.webform {
       width: 100%;
       padding-right: 110px;
     }
-
   }
   footer {
     .field--name-field-date {
@@ -1781,11 +1780,6 @@ article.webform {
           @include font-size(4.8, 5.6);
           margin: 0 0 40px 0;
         }
-        .submit-link {
-          position: absolute;
-          top: 0;
-          right: 0;
-        }
       }
       .views-content {
         .views-row {
@@ -1793,6 +1787,28 @@ article.webform {
           margin-bottom: 40px;
         }
       }
+    }
+  }
+  .content {
+    .field--type-image {
+      margin-bottom: 0;
+    }
+    .news-brief-teaser-section-image {
+      min-height:1px;
+      @include clearfix();
+      .field--name-field-body {
+        float: left;
+        width: 368px;
+      }
+      .field--type-image {
+        float: right;
+      }
+    }
+    .news-brief-teaser-section-no-image {
+      min-height:1px;
+      @include clearfix();
+      width: 100%;
+      padding-right: 110px;
     }
   }
 }

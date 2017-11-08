@@ -4,11 +4,12 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.search_index
-    - field.field.node.news_brief.body
+    - field.field.node.news_brief.field_body
     - field.field.node.news_brief.field_date
+    - field.field.node.news_brief.field_image
+    - field.field.node.news_brief.field_teaser
     - node.type.news_brief
   module:
-    - datetime
     - text
     - user
 id: node.news_brief.search_index
@@ -16,22 +17,21 @@ targetEntityType: node
 bundle: news_brief
 mode: search_index
 content:
-  body:
-    label: hidden
-    type: text_summary_or_trimmed
-    weight: 0
-    settings:
-      trim_length: 600
-    third_party_settings: {  }
-    region: content
-  field_date:
+  field_body:
+    type: text_default
     weight: 1
-    label: hidden
-    settings:
-      format_type: medium
-      timezone_override: ''
-    third_party_settings: {  }
-    type: datetime_default
     region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_teaser:
+    type: text_default
+    weight: 0
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
 hidden:
+  field_date: true
+  field_image: true
   links: true

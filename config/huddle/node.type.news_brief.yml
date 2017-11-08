@@ -10,7 +10,7 @@ third_party_settings:
     parent: ''
 name: 'News Brief'
 type: news_brief
-description: 'Use a news brief to post a quick update that doesn''t require a featured image or feature-length story'
+description: 'Use a news brief to post a quick update that doesn''t require a featured image or feature-length story. News briefs are displayed in the ''Briefly'' section on the homepage.'
 help: ''
 new_revision: true
 preview_mode: 0

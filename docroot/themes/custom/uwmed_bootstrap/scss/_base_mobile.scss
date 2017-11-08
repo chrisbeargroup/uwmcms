@@ -3148,13 +3148,19 @@ article.webform {
     }
   }
   .content {
-    .field--name-body {
+    .field--name-field-body {
       margin-bottom: 10px;
       @include font-size(1.6, 2.4);
       color: #000;
-
+      p {
+        @include font-size(1.6, 2.4);
+        color: #000;
+      }
+    }
+    .field--type-image {
+      margin-bottom: 10px;
       img {
-        max-width: 100%;
+        @include img-responsive-important;
       }
     }
   }

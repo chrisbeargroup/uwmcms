@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.storage.node.body
+    - field.storage.node.field_teaser
     - node.type.news_brief
   module:
     - datetime
@@ -283,10 +283,10 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: field
-        body:
-          id: body
-          table: node__body
-          field: body
+        field_teaser:
+          id: field_teaser
+          table: node__field_teaser
+          field: field_teaser
           relationship: none
           group_type: group
           admin_label: ''
@@ -332,9 +332,8 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: text_summary_or_trimmed
-          settings:
-            trim_length: 120
+          type: text_default
+          settings: {  }
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -358,7 +357,7 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.body'
+        - 'config:field.storage.node.field_teaser'
   page_news_briefs:
     display_plugin: page
     id: page_news_briefs

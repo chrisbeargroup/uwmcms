@@ -26,4 +26,13 @@ $metadata['https://openidp.feide.no'] = array(
 
 
 
+$config_file = sprintf('/mnt/gfs/%s.%s/nobackup/cmsdev.uwmedicine.org/simplesamlphp/metadata/saml20-idp-remote.php',
+	$_ENV['AH_SITE_GROUP'],
+	$_ENV['AH_SITE_ENVIRONMENT']);
+if (!file_exists($config_file) || !require_once($config_file)) { 
+
+	exit('Missing metadata file '. $config_file); 
+
+}
+
 

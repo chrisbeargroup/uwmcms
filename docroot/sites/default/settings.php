@@ -764,6 +764,12 @@ $settings['file_scan_ignore_directories'] = [
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
 
+
+$settings['simplesamlphp_dir'] = dirname($app_root) . '/simplesamlphp';
+//. '/' . $site_path .
+
+
+
 if (file_exists('/var/www/site-php')) {
   require '/var/www/site-php/uwmed/uwmed-settings.inc';
 }

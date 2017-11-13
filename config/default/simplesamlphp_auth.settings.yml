@@ -1,0 +1,28 @@
+langcode: en
+default_langcode: en
+activate: true
+mail_attr: 'urn:oid:0.9.2342.19200300.100.1.3'
+unique_id: 'urn:oid:0.9.2342.19200300.100.1.3'
+user_name: 'urn:oid:0.9.2342.19200300.100.1.3'
+auth_source: uwmdmkd-sp
+login_link_display_name: 'NetId Login'
+header_no_cache: 1
+role:
+  population: ''
+  eval_every_time: false
+register_users: true
+allow:
+  set_drupal_pwd: true
+  default_login: true
+  default_login_roles: {  }
+  default_login_users: '1'
+logout_goto_url: null
+user_register_original: admin_only
+sync:
+  mail: true
+  user_name: true
+autoenablesaml: false
+debug: true
+_core:
+  default_config_hash: SlvBDvDYAFLAkAikHJp_4rntvPn-nX6DLf92HOoX2cQ
+

@@ -1,0 +1,14 @@
+diff --git a/settings/simplesamlphp.settings.php b/settings/simplesamlphp.settings.php
+index 4b78eb3..d9db5fc 100644
+--- a/settings/simplesamlphp.settings.php
++++ b/settings/simplesamlphp.settings.php
+@@ -19,7 +19,8 @@
+ }
+ else {
+   // Local SAML path.
+-  if (is_dir(DRUPAL_ROOT . '/../simplesamlphp')) {
++  if (is_dir(DRUPAL_ROOT . '/../simplesamlphp') && 
++    is_dir(DRUPAL_ROOT . '/../vendor/simplesamlphp/simplesamlphp')) {
+     $settings['simplesamlphp_dir'] = DRUPAL_ROOT . '/../vendor/simplesamlphp/simplesamlphp';
+   }
+ }

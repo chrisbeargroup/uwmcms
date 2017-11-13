@@ -765,11 +765,25 @@ $settings['file_scan_ignore_directories'] = [
 # }
 
 
+
+
+/**
+ * UWMCMS 
+ * Set the path to our custom SimpleSAMLphp library 
+ * rather than autoloaded, vendor SimpleSAMLphp that installs with 
+ * the simplesamlphp_auth module.  
+ * 
+ */ 
 $settings['simplesamlphp_dir'] = dirname($app_root) . '/simplesamlphp';
-//. '/' . $site_path .
 
 
 
+
+/**
+ * UWMCMS 
+ * Autoload other settings. 
+ * 
+ */ 
 if (file_exists('/var/www/site-php')) {
   require '/var/www/site-php/uwmed/uwmed-settings.inc';
 }

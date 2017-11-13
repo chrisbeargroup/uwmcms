@@ -74,6 +74,16 @@
     "require-dev": {},
     "extra": {
         "enable-patching": true,
+        "patches": {
+            "drupal/core": {
+                "Ignore front end vendor folders to improve directory search performance": "https://www.drupal.org/files/issues/ignore_front_end_vendor-2329453-116.patch",
+                "My custom local patch": "./patches/drupal/some_patch-1234-1.patch"
+            },
+            "acquia/blt": {
+                "Ensure Aquia SimpleSAMLphp settings checks full library path. Allows our custom install to be used.": "drupal.org/project/simplesamlphp_auth",
+                "Settings file patch": "./patches/blt/"
+            }
+        },
         "installer-paths": {
             "docroot/core": [
                 "type:drupal-core"

@@ -69,13 +69,6 @@ AddEncoding gzip svgz
 <IfModule mod_rewrite.c>
   RewriteEngine on
 
-  ## SSL RULES ##
-  # Redirect HTTP to HTTPS in Acquia Cloud
-  RewriteCond %{ENV:AH_SITE_ENVIRONMENT} (ra|dev|test|prod)
-  RewriteCond %{HTTPS} off
-  RewriteCond %{HTTP:X-Forwarded-Proto} !https
-  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
   # Set "protossl" to "s" if we were accessed via https://.  This is used later
   # if you enable "www." stripping or enforcement, in order to ensure that
   # you don't bounce between http and https.
@@ -87,17 +80,7 @@ AddEncoding gzip svgz
   # even when running as CGI or FastCGI.
   RewriteRule ^ - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 
-  ## UWMED CUSTOM REWRITES ##
-  # Redirect CHEW Dev URL to Live URL
-  RewriteCond %{HTTP_HOST} chew.cms.uwmedicine.org
-  RewriteRule ^(.*)$ https://rightasrain.uwmedicine.org%{REQUEST_URI} [L,R=301]
-
-  # Redirect Huddle Dev URL to Live URL
-  RewriteCond %{HTTP_HOST} huddle.cms.uwmedicine.org
-  RewriteRule ^(.*)$ https://huddle.uwmedicine.org%{REQUEST_URI} [L,R=301]
-
-  ## DRUPAL-SPECIFIC RULES ##
-    # Block access to "hidden" directories whose names begin with a period. This
+  # Block access to "hidden" directories whose names begin with a period. This
   # includes directories used by version control systems such as Subversion or
   # Git to store control files. Files whose names begin with a period, as well
   # as the control files used by CVS, are protected by the FilesMatch directive
@@ -167,12 +150,6 @@ AddEncoding gzip svgz
   # Copy and adapt this rule to directly execute PHP files in contributed or
   # custom modules or to run another PHP application in the same directory.
   RewriteCond %{REQUEST_URI} !/core/modules/statistics/statistics.php$
-
-# Allow access to simplesaml paths.
-RewriteCond %{REQUEST_URI} !^/simplesaml
-
-
-
   # Deny access to any other PHP files that do not match the rules above.
   # Specifically, disallow autoload.php from being served directly.
   RewriteRule "^(.+/.*|autoload)\.php($|/)" - [F]

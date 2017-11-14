@@ -855,13 +855,16 @@ $config = array(
 
 
 
+if(!empty($_ENV['AH_SITE_ENVIRONMENT'])) {
 
-$config_file = sprintf('/mnt/gfs/%s.%s/nobackup/cmsdev.uwmedicine.org/simplesamlphp/config/acquia_config.php',
-	$_ENV['AH_SITE_GROUP'],
-	$_ENV['AH_SITE_ENVIRONMENT']);
-if (!file_exists($config_file) || !require_once($config_file)) { 
+  $config_file = sprintf('/mnt/gfs/%s.%s/nobackup/cmsdev.uwmedicine.org/simplesamlphp/config/acquia_config.php',
+    $_ENV['AH_SITE_GROUP'],
+    $_ENV['AH_SITE_ENVIRONMENT']);
+  if (!file_exists($config_file) || !require_once($config_file)) {
 
-	exit('Missing config file '. $config_file); 
+    throw new Exception('Missing config file '. $config_file);
+
+  }
 
 }
 

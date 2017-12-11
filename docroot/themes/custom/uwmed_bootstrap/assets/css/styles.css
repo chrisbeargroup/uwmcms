@@ -5837,6 +5837,7 @@ blockquote p {
 }
 #block-views-block-uwm-galleries-block-galleries-photo .view-uwm-galleries .views-footer .poll dl .choice-title {
   font-weight: bold;
+  padding-right: 120px;
 }
 #block-views-block-uwm-galleries-block-galleries-photo .view-uwm-galleries .views-footer .poll dl .choice-result .bar {
   display: none;
